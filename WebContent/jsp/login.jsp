@@ -14,4 +14,5 @@
 	</s:form>
 </div>
 
+<!--Changes -->
 <jsp:directive.include file="../includes/footer.jsp" />
