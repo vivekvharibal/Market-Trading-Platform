@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.ilp.mtp.bean">
+  <class name="ViewOpenPosition" table="tbl_open_position">
+  <id name="productId" column="product_id"></id>
+  <property name="productName" column="product_name"></property>
+  <property name="transactionDate" type="date" column="transaction_date"></property>
+  <property name="noOfShares" column="no_of_shares"></property>
+  <property name="transactionPrice" column="transaction_price"></property>
+  <property name="transactionType" column="transaction_type"></property>
+  </class>
+</hibernate-mapping>

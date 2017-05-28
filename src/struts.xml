@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false"></constant>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="createTradeAlert" class="com.tcs.ilp.mtp.action.AlertAction"
+			method="createTradeAlertAction">
+			<result name="success">/jsp/TradeAlertSuccess.jsp</result>
+		</action>
+		<action name="viewTradeAlert" class="com.tcs.ilp.mtp.action.AlertAction"
+			method="viewTradeAlertAction">
+			<result name="success">/jsp/viewTradeAlert.jsp</result>
+		</action>
+		<action name="viewOpenPosition" class="com.tcs.ilp.mtp.action.OpenPositionAction"
+			method="viewOpenPositionAction">
+			<result name="success">/jsp/viewOpenPosition.jsp</result>
+		</action>
+		<action name="login" class="com.tcs.ilp.mtp.action.LoginAction">
+			<result name="success">/jsp/createTradeAlert.jsp</result>
+			<result name="error">/jsp/errorLogin.jsp</result>
+		</action>
+		<action name="logout" class="com.tcs.ilp.mtp.action.LoginAction"
+			method="logout">
+			<result name="success">/jsp/login.jsp</result>
+		</action>
+		<action name="viewAccountValuation" class="com.tcs.ilp.mtp.action.AccountValuationAction"
+			method="viewAccountValuation">
+			<result name="success">/jsp/viewAccountValuation.jsp</result>
+		</action>
+		<action name="viewCashBalance" class="com.tcs.ilp.mtp.action.CashBalanceAction"
+			method="executeViewCashBalance">
+			<result name="success">/jsp/ViewCashBalance.jsp</result>
+		</action>
+		<action name="profitLoss" class="com.tcs.ilp.mtp.action.ProfitLossAction"
+			method="executeViewProfitLoss">
+			<result name="success">/jsp/viewPLSuccess.jsp</result>
+			<result name="error">/jsp/viewPLError.jsp</result>
+		</action>
+		  <action name="getCurrentValue"
+			class="com.tcs.ilp.mtp.action.AlertAction"
+			method="viewTradeAlertAction">
+			<result type="redirectAction">/viewTradeAlert.action</result>
+		</action> 
+	</package>
+</struts>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.password">Test#123</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+        <property name="hibernate.connection.username">system</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+         <property name="show_sql">true</property>  
+         <property name="hbm2ddl.auto">update</property> 
+      <mapping resource ="com/tcs/ilp/mtp/bean/Customer.hbm.xml"></mapping> 
+       <mapping resource ="com/tcs/ilp/mtp/bean/Market.hbm.xml"></mapping>
+        <mapping resource ="com/tcs/ilp/mtp/bean/Product.hbm.xml"></mapping>
+         <mapping resource ="com/tcs/ilp/mtp/bean/TradeAlert.hbm.xml"></mapping>
+          <mapping resource ="com/tcs/ilp/mtp/bean/TradeType.hbm.xml"></mapping>
+          <mapping resource ="com/tcs/ilp/mtp/bean/Transaction.hbm.xml"></mapping>
+           <mapping resource ="com/tcs/ilp/mtp/bean/User.hbm.xml"></mapping>
+           <mapping resource ="com/tcs/ilp/mtp/bean/ViewTradeAlertList.hbm.xml"></mapping>
+           <mapping resource ="com/tcs/ilp/mtp/bean/CurrentValues.hbm.xml"></mapping>
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,66 @@
+select* from tbl_user_login;
+
+insert into tbl_user_login values('user1' , 'password' , 'customer');
+insert into tbl_user_login values('user2' , 'password' , 'customer');
+insert into tbl_user_login values('user3' , 'password' , 'customer');
+
+desc tbl_product;
+
+select * from tbl_product;
+
+alter table tbl_product drop column current_value;
+
+
+create sequence alert_sequence start with 1 increment by 1;
+
+
+insert into tbl_market values(1,'NSE');
+insert into tbl_market values(2,'BSE');
+insert into tbl_market values(3,'Commodity');
+
+insert into tbl_trade_type values(1,'Derivative');
+insert into tbl_trade_type values(2,'Equity');
+insert into tbl_trade_type values(3,'Energy');
+insert into tbl_trade_type values(4,'Metals');
+insert into tbl_trade_type values(5,'Soft and Grains');
+
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'Infosys Ltd','INFY',2, 2195, 2195, 2199, 2199, 2194);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Tata Consultancy Services Limited','TCS',1, 2512.70, 2514.70, 2512.70, 2514.70, 2510.70);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'Bharat Heavy Electricals Limited','BHEL',2, 285.00, 283.65, 281.05, 283.65, 285.00);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'COLGATE-PALMOLIVE (INDIA) LTD','COLPAL.BO',2, 1927.25, 1930.25, 1935.25, 1935.25, 1927.25);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'IGATE GLOBAL','IGATESL.BO',1, 404.20, 406.20, 402.20, 408.20, 404.20);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'Lakshmi Machine Works Limited','LAXMIMACH',2, 3986.00, 3989.00, 3981.00, 3990.00, 3975.00);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'Oil & Natural Gas Corporation Ltd','ONGC',2, 353.60, 357.60, 351.60, 359.60, 353.60);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Reliance Industries Limited','RELIANCE',1, 881.25, 889.75, 881.25, 899.25, 880.25);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Suzlon Energy Ltd','SUZLON',1, 14.79, 16.79, 12.79, 18.79, 11.79);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'HDFC Bank Limited','HDFCBANK',2, 1044.00, 1055.50, 1046.00, 1056.70, 1040.10);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Canara Bank','CANBK',2, 463.00, 463.00, 463.00, 463.00, 463.00);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Hindustan Unilever Ltd','HINDUNILVR',2, 953.90, 953.90, 953.90, 953.90, 953.90);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Gold','GOLD',4, 2700, 2700, 2700, 2700, 2700);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Silver','SILVER', 4, 2700, 2700, 2700, 2700, 2700);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Aluminium','ALUMINIUM', 4, 140, 140, 140, 140, 140);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Copper','COPPER', 4, 400, 400, 400, 400, 400);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Zinc','ZINC', 4, 130, 130, 130, 130, 130);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Lead','LEAD', 4, 120, 120, 120, 120, 120);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Natural gas','NATURAL GAS', 3, 290, 290, 290, 290, 290);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Crude oil','CRUDE', 3, 3800 , 3800 , 3800 , 3800 , 3800 );
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Sugarcane','SUGARCANE', 5, 2700 , 2700  ,2700  , 2700 ,2700);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 3 , 'Cardamom','CARDAMOM', 5, 871 , 871  ,871  , 871 ,871);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'Cap Gemini S.A.','CAP', 2, 62.65 , 62.65  ,62.65, 62.65 ,62.65);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'Axis Bank Ltd','AXISBANK', 2, 564.00 , 564.00  ,564.00, 564.00 ,564.00);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Siemens Ltd','SIEMENS', 2, 1020.45 ,1020.45 ,1020.45, 1020.45,1020.45);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Bosch Ltd','BOSCHLTD', 2, 21707.00 ,21707.00 ,21707.00, 21707.00,21707.00);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'ATOS ORIGIN SA ORD','AEXAF', 2, 68.40 ,68.40 ,68.40, 68.40,68.40);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Toyota Motor Corporation','TM', 2, 129.86,129.86 ,129.86, 129.86,129.86);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 2 , 'Aditya Birla Nuvo Ltd','ABIRLANUV', 2, 1826.00,1826.00 ,1826.00, 1826.00,1826.00);
+insert into TBL_PRODUCT values(product_sequence.nextVal , 1 , 'Larsen & Toubro Ltd','LT', 1, 1705.00,1705.00 ,1705.00, 1705.00,1705.00);
+
+
+insert into tbl_user_login values('user1' , 'password' , 'customer');
+insert into tbl_user_login values('user2' , 'password' , 'customer');
+insert into tbl_user_login values('user3' , 'password' , 'customer');
+
+insert into tbl_customer_details values(customer_sequence.nextVal, 'Ms','Abc','Xyz','28-MAR-1991','India',9865473210,9632548710,'abc@gmail.com','user1','facebook',123456,9000);
+insert into tbl_customer_details values(customer_sequence.nextVal, 'Mr','Pqr','Lmn','16-Oct-1986','US',9865473210,9632548710,'pqr@gmail.com','user2','facebook',123456,9000);
+
+select tbl_product.product_name,tbl_alert.product_id,tbl_alert.customer_id,tbl_alert.more_than,tbl_alert.less_than,tbl_alert.price from tbl_product Join tbl_alert on tbl_alert.product_id=tbl_product.product_id and tbl_alert.customer_id =2;

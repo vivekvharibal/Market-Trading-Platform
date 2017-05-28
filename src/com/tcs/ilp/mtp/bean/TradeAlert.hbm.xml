@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.ilp.mtp.bean">
+	<class name="TradeAlert" table="tbl_alert">
+		<id name="alertId" column="alert_id">
+			<generator class="sequence">
+				<param name="sequence">alert_sequence</param>
+			</generator>
+		</id>
+		<property name="moreThan" column="more_than"></property>
+		<property name="lessThan" column="less_than"></property>
+		<property name="price" column="price"></property>
+		<property name="status"></property>
+		<many-to-one name="customer" class="com.tcs.ilp.mtp.bean.Customer" fetch="select">
+      <column name="customer_Id"></column>
+      </many-to-one>
+       <many-to-one name="product" class="com.tcs.ilp.mtp.bean.Product" fetch="select">
+      <column name="product_id"></column>
+      </many-to-one>
+	</class>
+</hibernate-mapping>

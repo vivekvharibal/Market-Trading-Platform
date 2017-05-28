@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.ilp.mtp.bean">
+  <class name="CurrentValues" table="tbl_current_values">
+  <composite-id>
+<key-property name="productId" column="product_id"  />
+<key-property name="timeStamp" column="current_time" />
+</composite-id>
+<property name="currentValue" column="current_value"></property>
+<many-to-one name="product" class="com.tcs.ilp.mtp.bean.Product" fetch="select" insert="false" update="false">
+      <column name="product_id"></column>
+      </many-to-one>
+  </class>
+</hibernate-mapping>

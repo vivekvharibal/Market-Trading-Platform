@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.ilp.mtp.bean">
+  <class name="ViewTradeAlertList" table="tbl_viewtradealertlist">
+  <id name="productId" column="product_id"></id>
+  <property name="productName" column="product_name"></property>
+  <property name="moreThan" column="more_than"></property>
+  <property name="lessThan" column="less_than"></property>
+  <property name="price" column="price"></property>
+  <property name="customerId" column="customer_id"></property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.ilp.mtp.bean">
+	<class name="User" table="tbl_user_login">
+		<id name="userName" column="user_name"></id>
+		<property name="password" column="password"></property>
+		<property name="role" column="role"></property>
+		<one-to-one name="customer" class="com.tcs.ilp.mtp.bean.Customer"
+			cascade="save-update"></one-to-one>
+	</class>
+</hibernate-mapping>

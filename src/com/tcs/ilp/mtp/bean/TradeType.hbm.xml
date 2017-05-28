@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.ilp.mtp.bean">
+  <class name="TradeType" table="tbl_trade_type">
+  <id name="typeId" column="type_id"></id>
+  <property name="description" column="description"></property>
+  <set name="product" table="tbl_product" inverse="true" lazy="false" fetch="select" cascade="all">
+      	<key><column name="type_id" not-null="true"/></key>
+      	 <one-to-many class="com.tcs.ilp.mtp.bean.Product" />
+      </set>
+  </class>
+</hibernate-mapping>

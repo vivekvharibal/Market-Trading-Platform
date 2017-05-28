@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.ilp.mtp.bean">
+	<class name="Product" table="tbl_product">
+		<id name="productId" column="product_id">
+			<generator class="sequence">
+				<param name="sequence">product_sequence</param>
+			</generator>
+		</id>
+		<property name="marketId" column="market_id"></property>
+		<property name="productName" column="product_name"></property>
+		<property name="abbr" column="abbr"></property>
+		<property name="typeId" column="type_id"></property>
+		<property name="openingPrice" column="opening_price"></property>
+		<property name="sellPrice" column="sell_price"></property>
+		<property name="buyPrice" column="buy_price"></property>
+		<property name="dayHigh" column="day_high"></property>
+		<property name="dayLow" column="day_low"></property>
+				<set name="tradeAlert" table="tbl_alert" inverse="true" lazy="false" fetch="select" cascade="all">
+      	<key><column name="product_id" not-null="true"/></key>
+      	 <one-to-many class="com.tcs.ilp.mtp.bean.TradeAlert" />
+      </set>
+      <many-to-one name="market" class="com.tcs.ilp.mtp.bean.Market" fetch="select">
+      <column name="market_Id"></column>
+      </many-to-one>
+      <many-to-one name="tradeType" class="com.tcs.ilp.mtp.bean.TradeType" fetch="select">
+      <column name="type_Id"></column>
+      </many-to-one>
+      <one-to-one name="transaction" class="com.tcs.ilp.mtp.bean.Transaction"
+			cascade="save-update"></one-to-one>
+		<set name="currentValues" table="tbl_current_values" inverse="true" lazy="false" fetch="select" cascade="all" >
+      	<key><column name="product_id" not-null="true"/></key>
+      	 <one-to-many class="com.tcs.ilp.mtp.bean.CurrentValues" />
+      </set>
+	</class>
+</hibernate-mapping>
